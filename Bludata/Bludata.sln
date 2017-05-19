@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bludata", "Bludata\Bludata.csproj", "{2400CE4A-E6B9-412B-8801-8FF225FD634E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bludata.Library", "Bludata.Library\Bludata.Library.csproj", "{0327F11A-CD18-47DC-8481-CEE8C76773BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2400CE4A-E6B9-412B-8801-8FF225FD634E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2400CE4A-E6B9-412B-8801-8FF225FD634E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2400CE4A-E6B9-412B-8801-8FF225FD634E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2400CE4A-E6B9-412B-8801-8FF225FD634E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0327F11A-CD18-47DC-8481-CEE8C76773BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0327F11A-CD18-47DC-8481-CEE8C76773BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0327F11A-CD18-47DC-8481-CEE8C76773BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0327F11A-CD18-47DC-8481-CEE8C76773BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

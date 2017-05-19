@@ -1,0 +1,14 @@
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\bin\Debug\Bludata.Library.dll.config
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\bin\Debug\Bludata.Library.dll
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\bin\Debug\Bludata.Library.pdb
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\bin\Debug\EntityFramework.dll
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\bin\Debug\MySql.Data.dll
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\bin\Debug\EntityFramework.xml
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\obj\Debug\Bludata.Library.Resource.Resource.resources
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\obj\Debug\Bludata.Library.csproj.GenerateResource.Cache
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\obj\Debug\Bludata.Library.dll
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\obj\Debug\Bludata.Library.pdb
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\obj\Debug\Bludata.Library.csprojResolveAssemblyReference.cache

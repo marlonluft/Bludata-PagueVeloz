@@ -1,0 +1,12 @@
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.DAL\bin\Debug\Bludata.DAL.dll.config
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.DAL\bin\Debug\Bludata.DAL.dll
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.DAL\bin\Debug\Bludata.DAL.pdb
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.DAL\bin\Debug\EntityFramework.dll
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.DAL\bin\Debug\MySql.Data.dll
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.DAL\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.DAL\bin\Debug\EntityFramework.xml
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.DAL\obj\Debug\Bludata.DAL.csprojResolveAssemblyReference.cache
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.DAL\obj\Debug\Bludata.DAL.dll
+D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.DAL\obj\Debug\Bludata.DAL.pdb

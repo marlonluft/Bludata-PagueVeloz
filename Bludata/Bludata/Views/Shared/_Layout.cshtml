@@ -1,0 +1,84 @@
+﻿@using Bludata.Library.Resource
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - @Resource.lbl_BludataAvaliacao</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.15/r-2.1.1/datatables.min.css" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink(Resource.lbl_BludataAvaliacao, "Index", "Pessoa", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink(Resource.lbl_Pessoa, "Index", "Pessoa")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" id="MudarUnidadeFederativa">
+                            @Resource.Menu_MudarUnidadeFederativa
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <br/>
+        <div id="pnlAlerta" class="alert alert-dismissible" style="display:none;">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <span></span>
+        </div>
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>@Resource.lbl_CriadoEm</p>
+        </footer>
+    </div>
+
+    <div id="ufContent">
+        <center>
+            <h3>@Resource.lbl_SelecioneSuaUnidadeFederativa</h3>
+            <div>
+                <input type="button" id="btnSC" class="btn btn-default" value="@Resource.lbl_SC" />
+                <input type="button" id="btnPR" class="btn btn-default" value="@Resource.lbl_PR" />
+            </div>
+        </center>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.15/r-2.1.1/datatables.min.js"></script>
+
+    @{
+        /* Mostra as mensagens de erro que aconteceram no servidor ao usuário. */
+        string msgErro = TempData["ErroMensagem"] as string;
+
+        if (!string.IsNullOrWhiteSpace(msgErro))
+        {
+            <text>
+                <script>
+                    MostrarAlerta(false, '@msgErro');
+                </script>
+            </text>
+        }
+    }    
+
+</body>
+</html>

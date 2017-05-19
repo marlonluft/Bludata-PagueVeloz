@@ -1,0 +1,167 @@
+﻿@using Bludata.Library.Resource;
+@model IEnumerable<Bludata.ViewModel.PessoaViewModel>
+
+@{
+    ViewBag.Title = Resource.lbl_Pessoas;
+}
+
+<h2>@Resource.lbl_Pessoas</h2>
+
+<p>
+    @Html.ActionLink(Resource.lbl_Cadastrar, "Cadastrar", null, htmlAttributes: new { @class= "btn btn-primary" })
+</p>
+
+<br/>
+
+<table id="tabelaPessoas" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataNascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataCadastro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefones)
+            </th>
+            <th>
+                &nbsp;
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CPF)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataNascimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataCadastro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RG)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UF)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefone)
+                </td>
+                <td>
+                    @Html.ActionLink(Resource.btn_Alterar, "Alterar", routeValues: new { id= item.Id }, htmlAttributes: new { @class = "btn btn-primary" })
+                    @Html.ActionLink(Resource.btn_Deletar, null, null, htmlAttributes: new { href = "#", @class = "btn btn-danger actionDeletar", @attrId=item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div id="modalDeletar" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">@Resource.lbl_DeletarPessoa</h4>
+            </div>
+            <div class="modal-body">
+                <p>@Resource.lbl_VoceRealmenteDesejaDeletarEstaPessoa</p>
+                @Html.Hidden("hndPessoaId")
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">@Resource.btn_Nao</button>
+                <button id="btnConfirmarDeletar" type="button" class="btn btn-danger">@Resource.btn_Sim</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+
+        // Carrega o componente DataTable
+        $(document).ready(function () {
+            $('#tabelaPessoas').DataTable({
+                "columnDefs": [
+                    { "orderable": false, "targets": 7 }
+                ],
+                "language": {
+                    "lengthMenu": "@Resource.dataTables_MostrandoRegistrosPorPagina",
+                    "zeroRecords": "@Resource.dataTables_NenhumRegistroEncontrado",
+                    "info": "@Resource.dataTables_PaginaDe",
+                    "infoEmpty": "@Resource.dataTables_NenhumRegistroDisponivel",
+                    "infoFiltered": "@Resource.dataTables_FiltrandoRegistrosTotal",
+                    "search": "@Resource.dataTables_Procurar",
+                    "paginate": {
+                        "first": "@Resource.dataTables_Primeira",
+                        "previous": "@Resource.dataTables_Anterior",
+                        "next": "@Resource.dataTables_Proxima",
+                        "last": "@Resource.dataTables_Ultima"
+                    }
+                }
+            });
+        });
+
+        $('.actionDeletar').on("click", function (e)
+        {            
+            var pessoaId = e.target.attributes["attrid"].value;
+            $('#hndPessoaId').val(pessoaId);
+
+            $('#modalDeletar').modal("show");
+        });
+
+        $('#btnConfirmarDeletar').on("click", function ()
+        {
+            var pessoaId = $('#hndPessoaId').val();
+
+            if (pessoaId !== null && typeof (pessoaId) !== 'undefined')
+            {
+                $.ajax({
+                    method: "POST",
+                    url: '@Url.Action("Deletar")',
+                    data: { id: pessoaId }
+                })
+                .done(function (retorno) 
+                {
+                    if (retorno.Sucesso)
+                    {
+                        MostrarAlerta(true, retorno.Mensagem);
+
+                        // Remove a linha da tabela referente a pessoa deletada
+                        $('[attrid="' + pessoaId + '"]').parent().parent().remove();
+                    }                   
+                })
+                .fail(function () 
+                {
+                    MostrarAlerta(false, "@Resource.Msg_HouveUmProblemaAoProcessarSuaSolicitacao");
+                });
+            }
+            else
+            {
+                MostrarAlerta(false, "@Resource.Msg_HouveUmProblemaAoProcessarSuaSolicitacao");                
+            }
+
+            $('#modalDeletar').modal("hide");
+        });
+
+    </script>
+}
