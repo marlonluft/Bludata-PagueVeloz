@@ -1,0 +1,25 @@
+CREATE DATABASE `bludata` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE bludata;
+
+CREATE TABLE `pessoa` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Nome` varchar(50) NOT NULL,
+  `CPF` varchar(15) NOT NULL,
+  `DataCadastro` datetime NOT NULL,
+  `DataNascimento` date NOT NULL,
+  `RG` varchar(15) DEFAULT NULL,
+  `UF` int(11) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE `telefone` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `IdPessoa` int(11) NOT NULL,
+  `Telefone` varchar(16) NOT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `fk_pessoa_idx` (`IdPessoa`),
+  CONSTRAINT `pessoa_fk` FOREIGN KEY (`IdPessoa`) REFERENCES `pessoa` (`Id`) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
