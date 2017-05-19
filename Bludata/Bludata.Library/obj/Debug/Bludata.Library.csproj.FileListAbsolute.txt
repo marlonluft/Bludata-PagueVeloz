@@ -12,3 +12,17 @@ D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\obj\Debug\Blud
 D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\obj\Debug\Bludata.Library.dll
 D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\obj\Debug\Bludata.Library.pdb
 D:\Documentos\Visual Studio 2017\Projects\Bludata\Bludata.Library\obj\Debug\Bludata.Library.csprojResolveAssemblyReference.cache
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\bin\Debug\Bludata.Library.dll.config
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\bin\Debug\Bludata.Library.dll
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\bin\Debug\Bludata.Library.pdb
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\bin\Debug\EntityFramework.dll
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\bin\Debug\MySql.Data.dll
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\bin\Debug\EntityFramework.xml
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\obj\Debug\Bludata.Library.csprojResolveAssemblyReference.cache
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\obj\Debug\Bludata.Library.Resource.Resource.resources
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\obj\Debug\Bludata.Library.csproj.GenerateResource.Cache
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\obj\Debug\Bludata.Library.dll
+C:\Users\marlo\Desktop\Repositorio\Bludata-PagueVeloz\Bludata\Bludata.Library\obj\Debug\Bludata.Library.pdb

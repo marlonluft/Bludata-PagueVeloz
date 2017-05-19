@@ -1,10 +1,12 @@
 namespace Bludata.Library.Model
 {
+    using MySql.Data.Entity;
     using System.Data.Entity;
 
     /// <summary>
     /// Classe context que contém a configuração do banco de dados.
     /// </summary>
+    [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public partial class Context : DbContext
     {
         /// <summary>
